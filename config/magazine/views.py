@@ -6,10 +6,6 @@ from .models import Product
 # Create your views here.
 
 
-def index(request):
-    return HttpResponse('dffdsfgdf')
-
-
 class ProductsListView(ListView):
     model = Product
     template_name = 'products_list.html'
