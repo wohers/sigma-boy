@@ -18,7 +18,7 @@ class ProductsListView(ListView):
 class ProductsCreateView(CreateView):
     model = Product
     fields = '__all__'
-    template_name = 'products_create.html'
+    template_name = 'products_form.html'
     success_url = reverse_lazy('index')
 
 
@@ -32,7 +32,7 @@ class ProductsUpdateView(UpdateView):
 class ProductsDeleteView(DeleteView):
     model = Product
     fields = '__all__'
-    template_name = 'products_from.html'
+    template_name = 'products_delete.html'
     success_url = reverse_lazy('index')
 
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Delete Product</h1>
+
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">{{ object.title }}</h5>
+                <p class="card-text"><strong>Price:</strong> ${{ object.price }}</p>
+                <p class="card-text"><strong>Description:</strong> {{ object.description }}</p>
+                {% if object.img %}
+                    <img src="{{ object.img.url }}" alt="{{ object.title }}" style="max-width: 200px;">
+                {% endif %}
+            </div>
+        </div>
+
+
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Да</button>
+            <a href="{% url 'index' %}" class="btn btn-secondary">Назад</a>
+        </form>
+    </div>
+</body>
+</html>
