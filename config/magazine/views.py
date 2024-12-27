@@ -16,3 +16,6 @@ class ProductsListView(ListView):
     context_object_name = 'products'
 
 
+
+
+
